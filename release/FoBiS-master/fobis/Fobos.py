@@ -18,9 +18,9 @@ This is a class aimed at fobos file handling.
 #
 # You should have received a copy of the GNU General Public License
 # along with FoBiS.py. If not, see <http://www.gnu.org/licenses/>.
-from __future__ import print_function
+
 try:
-  import ConfigParser as configparser
+  import configparser as configparser
 except ImportError:
   import configparser
 from copy import deepcopy
@@ -156,7 +156,7 @@ class Fobos(object):
       if self.fobos.has_section(section):
         for item in self.fobos.items(section):
           item_val = item[1]
-          for key, value in self.local_variables.items():
+          for key, value in list(self.local_variables.items()):
             item_val = re.sub(re.escape(key), value, item_val)
             # item_val = re.sub(r"(?!" + re.escape(key) + r"[aZ_-])\s*" + re.escape(key) + r"\s*", value, item_val)
           self.fobos.set(section, item[0], item_val)

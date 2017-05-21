@@ -460,7 +460,7 @@ class ParsedFile(object):
         else:
           # verifying if dep is newer than self
           if not os.path.exists(dep.name):
-            print(" Attention: file " + dep.name + " does not exist, but it is a dependency of file " + self.name)
+            print((" Attention: file " + dep.name + " does not exist, but it is a dependency of file " + self.name))
             sys.exit(1)
           else:
             # comparing the include dependency with the self-compiled-object if exist

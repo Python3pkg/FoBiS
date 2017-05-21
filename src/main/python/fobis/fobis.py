@@ -19,9 +19,9 @@ FoBiS.py, Fortran Building System for poor men
 # You should have received a copy of the GNU General Public License
 # along with FoBiS.py. If not, see <http://www.gnu.org/licenses/>.
 # modules loading
-from __future__ import print_function
+
 try:
-  import ConfigParser as configparser
+  import configparser as configparser
 except ImportError:
   import configparser
 import os

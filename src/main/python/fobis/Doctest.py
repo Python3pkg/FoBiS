@@ -20,7 +20,7 @@ by means of special docstrings.
 #
 # You should have received a copy of the GNU General Public License
 # along with FoBiS.py. If not, see <http://www.gnu.org/licenses/>.
-from __future__ import print_function
+
 import os
 import re
 __remodule__ = re.compile(r"^(\s*)" +  # eventual initial white spaces

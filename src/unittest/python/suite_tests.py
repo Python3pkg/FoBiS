@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """Testing FoBiS.py"""
 # import doctest
-from __future__ import print_function
+
 import filecmp
 import os
 import subprocess

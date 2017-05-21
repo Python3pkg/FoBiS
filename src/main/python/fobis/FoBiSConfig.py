@@ -306,7 +306,7 @@ class FoBiSConfig(object):
             dmod = syswork("FoBiS.py rule -f " + fobos_file + " -get mod_dir")
             output = syswork("FoBiS.py rule -f " + fobos_file + " -get_output_name")
           os.chdir(old_pwd)
-          print(result[1])
+          print((result[1]))
           if result[0] != 0:
             sys.exit(result[0])
           add_paths.append([os.path.normpath(os.path.join(fobos_path, dbld[1].strip('\n'))),
@@ -342,6 +342,6 @@ class FoBiSConfig(object):
     """
     string = ["FoBiS.py settings\n"]
     options = vars(self.cliargs)
-    for key, value in options.items():
+    for key, value in list(options.items()):
       string.append(str(key) + ": " + str(value))
     return "".join([s + "\n" for s in string])
